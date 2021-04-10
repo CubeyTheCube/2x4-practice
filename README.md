@@ -1,4 +1,4 @@
-# 2048 3x4
+# 2048 2x4
 
 [PLAY IT HERE](https:cubey.cf/2048-2x4/).
 A mofdified version of [http://gabrielecirulli.github.io/2048/](http://gabrielecirulli.github.io/2048/).
