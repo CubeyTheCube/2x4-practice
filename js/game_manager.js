@@ -132,7 +132,7 @@ GameManager.prototype.move = function (direction) {
   // 0: up, 1: right, 2: down, 3: left
   var self = this;
 
-  if (this.isGameTerminated()) return; // Don't do anything if the game's over
+  if (this.isGameTerminated() || direction === 2) return; // Don't do anything if the game's over
 
   var cell, tile;
 
@@ -253,6 +253,7 @@ GameManager.prototype.tileMatchesAvailable = function () {
 
       if (tile) {
         for (var direction = 0; direction < 4; direction++) {
+	  if(direction === 2) continue;
           var vector = self.getVector(direction);
           var cell   = { x: x + vector.x, y: y + vector.y };
 
